@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- Give Product a unique ID per platform-->
+  <?if $(var.Platform)=x64 ?>
+  <?define ProductCode = "{1F655FE4-B8BC-45F5-81B3-CD37443E7444}"?>
+  <?else?>
+  <?define ProductCode = "{FC896B88-154B-4522-8570-810872CB94A9}"?>
+  <?endif?>
+
+  <!-- Fixed upgrade ID -->
+  <?define UpgradeCode = "{DB89A42D-0D91-47F6-BB59-9493F76B1178}"?>
+
+  <?define BuildVersion = 0.16.3 ?>
+
+  <!-- Define Product-->
+  <Product Id="$(var.ProductCode)"
+           Name="!(loc.ProductName_$(var.Platform))"
+           Language="!(loc.Language)"
+           Version="$(var.BuildVersion)"
+           Manufacturer="!(loc.Company)"
+           UpgradeCode="$(var.UpgradeCode)">
+
+    <!-- Provide package details -->
+    <Package InstallerVersion="200"
+             Compressed="yes"
+             InstallScope="perMachine"
+             Platform="$(var.Platform)"
+             Manufacturer="!(loc.Company)"
+             Description="!(loc.Description)"
+             Keywords="!(loc.Keywords)"
+             Comments="!(loc.Comments)"
+             Languages="!(loc.Language)"
+             />
+
+    <!-- Downgrade error message -->
+    <MajorUpgrade DowngradeErrorMessage="!(loc.DowngradeErrorMessage)" />
+
+    <!-- Include .cab file into .msi file -->
+    <MediaTemplate
+      EmbedCab="yes"
+      />
+
+    <!-- Define main app icon -->
+    <Icon Id ="icon.ico" SourceFile="$(var.LiquidityApp.ProjectDir)\app.ico"/>
+
+    <!-- Use the icon.ico for this installer (Shows in Add/Remove Programs) -->
+    <Property Id="ARPPRODUCTICON">icon.ico</Property>
+    <!-- Help/Support website (Shows in  Add/Remove Programs) -->
+    <Property Id="ARPURLINFOABOUT">https://www.joeymccarthy.com</Property>
+
+    <!--Create a basic UI for the Installer -->
+    <UIRef Id="WixUI_Minimal" />
+
+    <!-- Change the installer UI background and banner images -->
+    <WixVariable Id="WixUIDialogBmp" Value="$(var.ProjectDir)\Assets\Background.bmp"/>
+    <WixVariable Id="WixUIBannerBmp" Value="$(var.ProjectDir)\Assets\Banner.bmp"/>
+    <!-- Change the License Agreement -->
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.ProjectDir)\Assets\EmpyreanLicense.rtf"/>
+
+    <!-- Define components, shortcuts, files etc... for installer -->
+    <Feature Id="ProductFeature" Title="LiquidityTest" Level="1">
+
+      <ComponentGroupRef Id="ProductComponents" />
+      <ComponentGroupRef Id="PublishedComponents"/>
+
+    </Feature>
+
+  </Product>
+
+</Wix>

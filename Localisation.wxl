@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WixLocalization Culture="en-us" xmlns="http://schemas.microsoft.com/wix/2006/localization">
+
+  <String Id="ProductName_x86">Liquidity App (32bit)</String>
+  <String Id="ProductName_x64">Liquidity App (64bit)</String>
+  <String Id="ProductFolderName">Empyrean-Solutions</String>
+
+  <String Id="Company">Empyrean-Solutions</String>
+
+  <String Id="Description">Liquidity Stress Test Application is pure class </String>
+  <String Id="Comments"> It's still class</String>
+  <String Id="Keywords">dotnet, core, application, installer </String>
+
+  <String Id="DowngradeErrorMessage">A newer version of Liquidity is already installed.</String>
+
+  <String Id="Language">1033</String>
+
+</WixLocalization>

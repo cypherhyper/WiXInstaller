@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+
+  <!-- files to include-->
+  <Fragment>
+    
+    <!-- Product components-->
+    <ComponentGroup Id="ProductComponents">
+      
+      
+    </ComponentGroup>
+    
+    <!-- Installed files -->
+    <DirectoryRef Id ="INSTALLFOLDER">
+
+      <Component Id="empyrean_icons" Guid="{3F5A27EC-315E-4701-B24E-572CD469FBB1}">
+        <File Id="Empyrean_Icons" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\empyrean_icons.svg" />
+
+        <!-- Remove Start Menu Items -->
+        <RemoveFolder Id="RemoveStartMenu" Directory="InstallProgramMenuFolder" On="uninstall"/>
+      </Component>
+
+      <Component Id="empyrean_icons2" Guid="{BB2FDAA5-5E6C-439F-8D4D-C6D80E0899D4}">
+        <File Id="Empyrean_Icons2" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\empyrean_icons.ttf"/>
+      </Component>
+
+      <Component Id="empyrean_icons3" Guid="{3FD7B6F3-7CCC-4900-B8A0-F35D30EF198A}">
+        <File Id="Empyrean_Icons3" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\empyrean_icons.woff"/>
+      </Component>
+
+      <Component Id="fav_icon" Guid="{63B79C10-63FB-4DB9-8143-D84C397D54E7}">
+        <File Id="fav_icon" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\favicon.ico"/>
+      </Component>
+
+      <Component Id="index" Guid="{33AF4CAF-0792-4BA4-9529-6C32C32C714A}">
+        <File Id="index" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\index.html"/>
+      </Component>
+
+      <Component Id="main" Guid="{8570E68C-1748-4DA7-9BFF-9FFBF9A6B386}">
+        <File Id="mainjs" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\main.js"/>
+      </Component>
+
+      <Component Id="mainmap" Guid="{3C67688E-5923-4F29-93ED-ACD395C1157A}">
+        <File Id="mainjsmap" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\main.js.map"/>
+      </Component>
+
+      <Component Id="polyfills" Guid="{02924334-1620-42AD-9A0B-9BDF5F70F281}">
+        <File Id="polyfillsjs" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\polyfills.js"/>
+      </Component>
+
+      <Component Id="polyfillsmap" Guid="{6FB723D7-EB7A-434D-9263-B7C06E8F4C81}">
+        <File Id="polyfillsjsmap" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\polyfills.js.map"/>
+      </Component>
+
+      <Component Id="polyfills_es5" Guid="{653A1BE4-E289-4360-8069-7F1226FBAC95}">
+        <File Id="polyfills_es5" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\polyfills-es5.js"/>
+      </Component>
+
+      <Component Id="polyfills_es5map" Guid="{42F3AA6A-01BC-423A-8FDA-92F102FCFAD5}">
+        <File Id="polyfills_es5map" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\polyfills-es5.js.map"/>
+      </Component>
+
+      <Component Id="runtime" Guid="{87805BE9-3EDD-4285-956A-E9187C41D11B}">
+        <File Id="runtime" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\runtime.js"/>
+      </Component>
+
+      <Component Id="runtimejsmap" Guid="{83E32175-A4D9-4729-A2AE-D707FE84CBEC}">
+        <File Id="runtimejsmap" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\runtime.js.map"/>
+      </Component>
+
+      <Component Id="styles" Guid="{18D1EF77-EE1F-47F2-9C23-317A23F5CEF4}">
+        <File Id="styles" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\styles.js"/>
+      </Component>
+
+      <Component Id="stylesmap" Guid="{49CF25CA-589C-480B-ACA6-D7B97C67E64F}">
+        <File Id="stylesjsmap" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\styles.js.map"/>
+      </Component>
+
+      <Component Id="vendor" Guid="{434A8AF9-EE0D-4611-A221-DF4E7D9F5B62}">
+        <File Id="vendor" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\vendor.js"/>
+      </Component>
+
+      <Component Id="vendorjsmap" Guid="{B14784CF-6ACC-4D27-A87E-3EEE195A1532}">
+        <File Id="vendorjsmap" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\vendor.js.map"/>
+      </Component>
+
+      <Component Id="browser_detect" Guid="{A6CDD50C-3CA2-492B-AEDA-49B48091D6E6}">
+        <File Id="browser_detect" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\css\browser-detect.css"/>
+      </Component>
+
+      <Component Id="browser_detect2" Guid="{937F81F5-E0AC-4AA6-8C6B-C45A77414FEF}">
+        <File Id="browser_detect2" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\js\browser-detect.js"/>
+      </Component>
+
+      <Component Id="empyrean_logo" Guid="{9E6924BA-EE15-46AF-BBAF-70BAEAA0C0A8}">
+        <File Id="Empyrean_logo" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\empyrean_logo.png"/>
+      </Component>
+
+      <Component Id="empyrean_logo2" Guid="{81C80560-D5D2-4C29-992D-9EC0ABD29D6D}">
+        <File Id="Empyrean_logo2" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\empyrean_logo@2x.png"/>
+      </Component>
+
+      <Component Id="es_logo" Guid="{1B2C8F34-E698-45B5-A48B-C8C0ED6232C5}">
+        <File Id="Es_logo" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\es-logo.png"/>
+      </Component>
+
+      <Component Id="favicon2" Guid="{9D2B5190-2FAF-4DFA-9F4D-78CEDDA8C600}">
+        <File Id="favicon2" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\favicon.png"/>
+      </Component>
+
+      <Component Id="icon" Guid="{1D23B3FD-3A7A-4F03-82EF-722FF42A6A2E}">
+        <File Id="icon" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\icon.png"/>
+      </Component>
+
+      <Component Id="iconsingle" Guid="{67A6546B-9016-40F8-9EF9-35F93F02B446}">
+        <File Id="icon_single" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\icon-single.png"/>
+      </Component>
+
+      <Component Id="selectdropdown" Guid="{0E20047A-B550-4725-AFF9-9E6E98589977}">
+        <File Id="select_dropdown" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\select_dropdown.png"/>
+      </Component>
+
+      <Component Id="selectdropdown2" Guid="{C88D61C9-C0EB-4341-A874-3C407DF70843}">
+        <File Id="select_dropdown2" KeyPath="yes" Source="D:\a\3\s\WiXInstaller\Web\assets\images\select_dropdown@2x.png"/>
+      </Component>
+
+    </DirectoryRef>
+
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="PublishedComponents">
+      <ComponentRef Id="empyrean_icons"/>
+      <ComponentRef Id="empyrean_icons2"/>
+      <ComponentRef Id="empyrean_icons3"/>
+      <ComponentRef Id="fav_icon"/>
+      <ComponentRef Id="index"/>
+      <ComponentRef Id="main"/>
+      <ComponentRef Id="mainmap"/>
+      <ComponentRef Id="polyfills"/>
+      <ComponentRef Id="polyfillsmap"/>
+      <ComponentRef Id="polyfills_es5"/>
+      <ComponentRef Id="polyfills_es5map"/>
+      <ComponentRef Id="runtime"/>
+      <ComponentRef Id="runtimejsmap"/>
+      <ComponentRef Id="styles"/>
+      <ComponentRef Id="stylesmap"/>
+      <ComponentRef Id="vendor"/>
+      <ComponentRef Id="vendorjsmap"/>
+      <ComponentRef Id="browser_detect"/>
+      <ComponentRef Id="browser_detect2"/>
+      <ComponentRef Id="empyrean_logo"/>
+      <ComponentRef Id="empyrean_logo2"/>
+      <ComponentRef Id="es_logo"/>
+      <ComponentRef Id="favicon2"/>
+      <ComponentRef Id="icon"/>
+      <ComponentRef Id="iconsingle"/>
+      <ComponentRef Id="selectdropdown"/>
+      <ComponentRef Id="selectdropdown2"/>
+           
+    </ComponentGroup>
+  </Fragment>
+</Wix>
